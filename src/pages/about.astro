@@ -4,7 +4,7 @@ const pageTitle = "About Me";
 const identity = {
     firstName: "Sarah",
     country: "Canada",
-    ocupation: "Technical Writer",
+    occupation: "Technical Writer",
     hobbies: ["photography", "birdwatching", "baseball"],
 };
 
@@ -19,6 +19,17 @@ const goal = 3;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
+    <style>
+        h1 {
+            color: purple;
+            font-size: 4em;
+        } 
+        .skill {
+            color: green;
+            font-weight: bold;
+        }
+
+    </style>
   </head>
   <body>
     <a href="/">Home</a>
@@ -37,13 +48,13 @@ const goal = 3;
 </ul>
 <p>My skills are:</p>
 <ul>
-  {skills.map((skill) => <li>{skill}</li>)}
+  {skills.map((skill) => <li class= "skill">{skill}</li>)}
 </ul>
 
-{happy <p> I am happy to be learning Astro!</p>}
+{happy && <p> I am happy to be learning Astro!</p>}
 
-{finished <p>I finished ths tutorial!</p>}
+{finished && <p>I finished this tutorial!</p>}
 
-{goal === 3 <p>My goal is to finish in 3 days.</p> <p>My goal is not 3 days.</p>}
+{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
   </body>
 </html>
